@@ -1,0 +1,399 @@
+/* FONT FACE */
+@font-face {
+	font-family: 'freestyle';
+	src: url('../font/FREESCPT.TTF');
+}
+
+/*GLOBAL */
+* {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	outline: none;
+	text-decoration: none;
+	-webkit-transition: all .2s ease 0s;
+	transition: all .2s ease 0s;
+	font-family: 'freestyle', sans-serif;
+}
+
+*:hover {
+	-webkit-transition: all .2s ease 0s;
+	transition: all .2s ease 0s;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+/* HEADER */
+header {
+	text-align: center;
+	position: relative;
+	z-index: 100;
+}
+
+#logo img {
+	width: 100%;
+	display: block;
+	padding: 2rem;
+}
+
+header ul {
+	list-style-type: none;
+}
+
+header nav a {
+	display: block;
+	width: 50%;
+	margin: 3rem auto;
+	padding: 0.2rem 0;
+	font-size: 3.5rem;
+	color: #ed1e79;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-shadow: -1px 0 0 rgba(0, 0, 0, 0.8), 
+            	1px 0 0 rgba(0, 0, 0, 0.8),
+            	0 -1px 0 rgba(0, 0, 0, 0.8),
+            	0 1px 0 rgba(0, 0, 0, 0.8);
+}
+
+header nav {
+	margin: 3rem 0;
+}
+
+header nav a:hover {
+	background: linear-gradient(to left,rgba(247, 213, 232, 0.3),rgba(255, 255, 255, 1) 50%,rgba(247, 213, 232, 0.3));
+	padding: 0.2rem 2rem;
+}
+
+header::after {
+	position: absolute;
+	background: url('../img/ligneh.png') center 0 no-repeat;
+	background-size: cover;
+	left: 0;
+	right: 0;
+	bottom: -7rem;
+	content: "";
+	z-index: 100;
+	height: 5rem;
+} 
+
+/* MAIN */
+#slider div img {
+	max-width: 100%;
+}
+
+#slider {
+	text-align: center;
+}
+
+#slider div:nth-of-type(2) {
+	padding: 0 2rem;
+}
+
+#slider h1 {
+	font-size: 3.5rem;
+}
+
+#slider h1 span img {
+	width: 12%;
+}
+
+#slider div:nth-of-type(2) p {
+	font-size: 3rem;
+	color: #ed1e79;
+}
+
+.org {
+	display: flex;
+	flex-direction: column;
+}
+
+.org img {
+	width: 100%;
+}
+
+#services article {
+	text-align: center;
+	padding: 2rem;
+	font-size: 3rem;
+}
+
+#services:hover article {
+	opacity: 0.4;
+}
+
+#services article:hover {
+	opacity: 1;
+}
+
+#services article p {
+	color: #b1afaf;
+}
+
+.fond2h {
+	background-image: url('../img/fond2h.png'), url('../img/fond2b.png');
+	background-position: center top -5rem, center bottom;
+	background-repeat: no-repeat;
+}
+
+#qualites .fondcontenu {
+	padding: 5rem 0;
+	background-color: #ed1e79;
+}
+
+#qualites .contenu {
+	padding: 2rem;
+}
+
+#qualites img {
+	filter: invert(0);
+	transform: scale(1);
+}
+
+#qualites article:hover img {
+	filter: invert(1);
+	transform: scale(1.2);
+}
+
+#qualites article:hover {
+	color: black;
+}
+
+#qualites {
+	text-align: center;
+	font-size: 3rem;
+	padding: 14rem 0;
+	color: white;
+}
+
+#qualites h2 {
+	text-transform: uppercase;
+	font-size: 3rem;
+}
+
+#qualites img {
+	width: 50%;
+}
+
+/* Partie About */
+#nous {
+	text-align: center;
+	font-size: 3rem;
+	padding: 2rem;
+}
+
+#nous h2 {
+	color: #ed1e79;
+	font-size: 7rem;
+}
+
+#nous img {
+	width: 100%;
+}
+
+#nous #cook {
+	width: 20%;
+	display: block;
+	margin: 0 auto;
+}
+
+/* FOOTER */
+footer {
+	background-image: url('../img/fond2h.png');
+	background-position: center -10rem;
+	background-repeat: no-repeat;
+	color: white;
+	font-size: 2rem;
+	text-align: center;
+	padding: 5rem 0 0;
+}
+
+.copyright {
+	background-color: #ed1e79;
+	padding: 2rem 0;
+}
+
+
+/*TABLETTE*/
+@media screen and (min-width: 1024px) {
+
+	#logo {
+		width: 30%;
+		display: inline-block;
+		padding: 2rem;
+		vertical-align: middle;
+	}
+
+	#logo img {
+		display: inline-block;
+		margin-top: -3.6rem;
+	}
+
+	header nav {
+		display: inline-block;
+		width: 65%;
+		vertical-align: middle;
+		margin-bottom: 0;
+	}
+
+	header nav a {
+		display: inline-block;
+		width: 25%;
+		margin: 0;
+		border-radius: 5px 5px 5px 5px;
+		padding: 0.2rem 1rem;
+		font-size: 3rem;
+	}
+
+	header nav a:nth-child(2) {
+		margin: 0 3rem;
+	}
+
+	header nav a:hover {
+		padding: 0.2rem 1rem;
+	}
+
+	header::after {
+		bottom: -7rem;
+		height: 8rem;
+	}
+
+	#services, #qualites .contenu, #nous {
+		max-width: 95%;
+		margin: 0 auto;
+	}
+
+	#slider h1 span img {
+		width: 5%;
+		vertical-align: text-top;
+	}
+
+	#slider h1 {
+		margin-bottom: 0;
+	}
+
+	#slider p {
+		margin-top: 0;
+	}
+
+	.container .org {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.org article {
+		flex: 1;
+	}
+
+	.contenu article {
+		padding: 2rem;
+	}
+
+	.contenu article:nth-of-type(1) img {
+		margin-top: 5rem;
+		margin-bottom: 2rem;
+	}
+
+	#qualites .fondcontenu {
+		padding: 0rem;
+	}
+
+	#nous div {
+		display: inline-block;
+		width: 30%;
+	}
+
+	#nous p {
+		display: inline-block;
+		width: 65%;
+		text-indent: 4rem;
+	}
+
+	#nous h2 {
+		margin: 0;
+	}
+
+	#nous #cook {
+		width: 10%;
+	}
+
+	.copyright {
+		padding: 1rem;
+	}
+
+	small {
+		font-size: 2.2rem;
+	}
+
+	footer {
+		background-position: center -10.5rem;
+	}
+}
+
+
+/*DESKTOP*/
+@media screen and (min-width: 1280px) {
+
+	header::after {
+		bottom: -8rem;
+		height: 12rem;
+	}
+
+	header nav a:hover {
+		
+		animation-name: glisse;
+		animation-duration: 1s;
+		animation-fill-mode: forwards;
+		animation-direction: alternate;
+		animation-timing-function: ease;
+	}
+
+	#slider, #services, #qualites .contenu, #nous {
+		max-width: 80%;
+		margin: 0 auto;
+	}
+
+	#services img {
+		width: 80%;
+	}
+
+	#services article:nth-of-type(2) {
+		transform: translateY(5rem);
+	}
+
+	#services article:hover img {
+		
+		animation-name: glisse;
+		animation-duration: 1s;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
+		animation-timing-function: ease-in-out;
+	}
+
+	@keyframes glisse {
+		from {transform: translateY(0);}
+		to {transform: translateY(2rem);}
+	}
+
+	.contenu article:nth-of-type(2) {
+		transform: translateY(5rem);
+	}
+
+	#qualites img {
+		width: 20%;
+	}
+
+	#nous p {
+		vertical-align: top;
+	}
+
+	#nous div img {
+		width: 80%;
+	}
+
+	#nous #cook {
+		width: 5%;
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
